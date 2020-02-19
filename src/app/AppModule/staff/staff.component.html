@@ -1,0 +1,10 @@
+<p>staff details!</p>
+<p>my name is {{peru}}</p>
+<form [formGroup]="staffForm" (ngSubmit)="onSubmit()">
+    <input type='text' formControlName='name' id='name'>
+    <button type='submit' class="btn"></button>
+</form>
+<div *ngIf="staffForm.value.name">
+    name:{{staffForm.value.name}}
+</div>
+
