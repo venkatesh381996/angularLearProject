@@ -8,6 +8,6 @@ import { Observable} from 'rxjs';
 export class CanActiveGaurdGuard implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     alert('guard activated');
-    return true;
+    return false;
   }
 }
