@@ -1,7 +1,10 @@
 <p>hello heros!</p>
-<p>student service</p>
-<p>{{studentList}}</p>
-<a routerLink="/studentdetails/{{id}}" routerLinkActive="active act"
->RAM</a>
-
+<p>student service</p><br><br>
+<table style="margin-left: 650px">
+    <th>ID</th><pre class='tab'></pre>
+    <th>name</th>
+    <tr *ngFor="let student of studentsData">
+        <a [routerLink]="['/herolist',student.rollNo]" routerLinkActive="router-link-active" ><td>{{student.rollNo}}</td><td>{{student.name}}</td></a>
+    </tr>
+</table>
 <router-outlet></router-outlet>

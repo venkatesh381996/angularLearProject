@@ -3,9 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { CustomersModule } from './customers/customers.module';
 import { HeroComponent } from './AppModule/hero/hero.component';
 import { CanActiveGaurdGuard } from './can-active-gaurd.guard';
+import { CanActivateCheckGuard } from './can-activate-check.guard';
+import { StudentComponent } from './AppModule/student/student.component';
 
 const routes: Routes = [{path: 'customer', loadChildren: () => CustomersModule },
-{path: 'herolist', component: HeroComponent, canActivate: [CanActiveGaurdGuard]}
+{path: 'herolist', component: HeroComponent, canActivate: [CanActiveGaurdGuard, CanActivateCheckGuard],
+children: [{path: ':id', component: StudentComponent}]
+}
 ];
 
 @NgModule({

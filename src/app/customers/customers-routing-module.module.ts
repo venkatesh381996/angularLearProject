@@ -7,8 +7,6 @@ import { CustomerDataComponent } from '../customer-data.component';
 
 const routes: Routes = [
    {path: '', component: CustomerComponent, pathMatch: 'full'},
- // {path: '', component: CustomerComponent, children: [{path: 'customer/customerdata', component: CustomerDataComponent},
-//]},
 {path: 'customerdata', component: CustomerDataComponent}
 ];
 
