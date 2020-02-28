@@ -15,7 +15,7 @@ studentData: StudentDetails[];
   getstudents(): Observable<StudentDetails[]> {
     return this.http.get<StudentDetails[]>('/assets/data/student.json').pipe(tap(response => {
       debugger;
-      response[0].name = 'krishna';
+      response[0].name = 'dinesh';
       this.studentData = response;
       console.log ( this.studentData);
     }));
