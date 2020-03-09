@@ -9,8 +9,8 @@ import { ChildActiveGuard } from './child-active.guard';
 
 const routes: Routes = [{path: 'customer', loadChildren: () => CustomersModule },
 {path: 'herolist', component: HeroComponent, canActivate: [CanActiveGaurdGuard, CanActivateCheckGuard],
-canActivateChild:[ChildActiveGuard],
-children: [{path: ':id', component: StudentComponent}]
+canActivateChild: [ChildActiveGuard],
+children: [{path: ':id/:name', component: StudentComponent}]
 }
 ];
 

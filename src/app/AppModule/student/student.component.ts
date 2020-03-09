@@ -8,9 +8,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class StudentComponent implements OnInit {
  id: number;
+ name: string;
   constructor(private activeRouter: ActivatedRoute) {
     debugger;
     this.id = this.activeRouter.snapshot.params.id;
+    this.name=this.activeRouter.snapshot.params.name;
     console.log("id:"+this.id);
    }
  
